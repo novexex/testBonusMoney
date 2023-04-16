@@ -25,7 +25,10 @@ struct MainView: View {
                 if !cards.isEmpty {
                     VStack {
                         ForEach(cards) { card in
-                            CardView(card: card, showAlert: $showAlert, activeAlert: $activeAlert, currentCard: $currentCard)
+                            CardView(card: card,
+                                     showAlert: $showAlert,
+                                     activeAlert: $activeAlert,
+                                     currentCard: $currentCard)
                                 .cornerRadius(20)
                                 .padding()
                         }

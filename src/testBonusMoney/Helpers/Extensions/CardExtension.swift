@@ -10,7 +10,20 @@ extension Card: Identifiable {
     
     init() {
         company = Company(companyId: "")
-        customerMarkParameters = CustomerMarkParameters(loyaltyLevel: LoyaltyLevel(cashToMark: 0, markToCash: 0, name: "", number: 0, requiredSum: 0), mark: 0)
-        mobileAppDashboard = MobileAppDashboard(accentColor: "", backgroundColor: "", cardBackgroundColor: "", companyName: "", highlightTextColor: "", logo: "", mainColor: "", textColor: "")
+        customerMarkParameters = CustomerMarkParameters(loyaltyLevel:
+                                                            LoyaltyLevel(cashToMark: 0,
+                                                                         markToCash: 0,
+                                                                         name: "",
+                                                                         number: 0,
+                                                                         requiredSum: 0),
+                                                        mark: 0)
+        mobileAppDashboard = MobileAppDashboard(accentColor: "",
+                                                backgroundColor: "",
+                                                cardBackgroundColor: "",
+                                                companyName: "",
+                                                highlightTextColor: "",
+                                                logo: "",
+                                                mainColor: "",
+                                                textColor: "")
     }
 }

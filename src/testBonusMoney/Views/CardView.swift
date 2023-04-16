@@ -63,25 +63,25 @@ struct CardView: View {
                         activeAlert = .eyeButton
                         currentCard = card
                         showAlert = true
-                    }) {
+                    }, label: {
                         Image("eye_white")
                             .resizable()
                             .colorMultiply(Color(hex: card.mobileAppDashboard.mainColor))
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25)
-                    }
+                    })
                     
                     Button(action: {
                         activeAlert = .trashButton
                         currentCard = card
                         showAlert = true
-                    }) {
+                    }, label: {
                         Image("trash_white")
                             .resizable()
                             .colorMultiply(Color(hex: card.mobileAppDashboard.accentColor))
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25)
-                    }
+                    })
                 }
                 .padding(.horizontal)
                 
