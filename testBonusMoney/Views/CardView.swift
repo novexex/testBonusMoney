@@ -10,8 +10,9 @@ import SwiftUI
 struct CardView: View {
     let card: Card
     
-    @State private var showAlert = false
-    @State private var activeAlert: ActiveAlert = .eye
+    @Binding var showAlert: Bool
+    @Binding var activeAlert: ActiveAlert
+    @Binding var currentCard: Card
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -59,7 +60,8 @@ struct CardView: View {
             HStack {
                 HStack(spacing: 50) {
                     Button(action: {
-                        activeAlert = .eye
+                        activeAlert = .eyeButton
+                        currentCard = card
                         showAlert = true
                     }) {
                         Image("eye_white")
@@ -70,7 +72,8 @@ struct CardView: View {
                     }
                     
                     Button(action: {
-                        activeAlert = .trash
+                        activeAlert = .trashButton
+                        currentCard = card
                         showAlert = true
                     }) {
                         Image("trash_white")
@@ -85,7 +88,8 @@ struct CardView: View {
                 Spacer()
                 
                 Button("Подробнее") {
-                    activeAlert = .more
+                    activeAlert = .moreButton
+                    currentCard = card
                     showAlert = true
                 }
                 .frame(width: 130)
@@ -93,22 +97,6 @@ struct CardView: View {
                 .foregroundColor(Color(hex: ProjectColors.mainColor))
                 .background(Color(hex: ProjectColors.backgroundColor))
                 .cornerRadius(20)
-                .alert(isPresented: $showAlert) {
-                                switch activeAlert {
-                                case .eye:
-                                    return Alert(title: Text("Eye button pressed"),
-                                                 message: Text("companyID: \(card.company.companyId)"),
-                                                 dismissButton: .default(Text("OK")))
-                                case .trash:
-                                    return Alert(title: Text("Trash button pressed"),
-                                                 message: Text("companyID: \(card.company.companyId)"),
-                                                 dismissButton: .default(Text("OK")))
-                                case .more:
-                                    return Alert(title: Text("More button pressed"),
-                                                 message: Text("companyID: \(card.company.companyId)"),
-                                                 dismissButton: .default(Text("OK")))
-                                }
-                }
             }
             
         }

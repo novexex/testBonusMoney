@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct MainView: View {
-    @State private var cards: [Card] = []
-    @State private var isLoading: Bool = true
+    @State var cards: [Card] = []
+    @State var isLoading: Bool = true
+    @State var showAlert = false
+    @State var activeAlert: ActiveAlert = .messageError
+    @State var errorMessage = ""
+    
     @State private var offset: Int = 0
     @State private var isRefreshing = false
-    @State private var showAlert = false
-    @State private var activeAlert: ErrorAlert = .auth
-    @State private var errorMessage = ""
+    @State private var currentCard = Card()
+    @State private var stopFetchData = false
     
     var body: some View {
         NavigationView {
@@ -22,10 +25,18 @@ struct MainView: View {
                 if !cards.isEmpty {
                     VStack {
                         ForEach(cards) { card in
-                            CardView(card: card)
+                            CardView(card: card, showAlert: $showAlert, activeAlert: $activeAlert, currentCard: $currentCard)
                                 .cornerRadius(20)
                                 .padding()
                         }
+                    }
+                }
+            }
+            // MARK: I couldn't pull to refresh at the bottom, so I left the default
+            .refreshable {
+                if !stopFetchData {
+                    NetworkService.fetchCompanies(offset: offset) { cards, responseCode, error in
+                        self.networkProcessing(cards, responseCode, error)
                     }
                 }
             }
@@ -37,45 +48,37 @@ struct MainView: View {
             }
             .background(Color(hex: CustomColors.lightGrey))
             .onAppear {
-                NetworkService.fetchCompanies(offset: offset) { cards, errorCode, error in
-                    if errorCode != nil {
-                        switch errorCode {
-                        case 401:
-                            activeAlert = .auth
-                            showAlert = true
-                        case 400:
-                            activeAlert = .message
-                            guard let textError = error?.localizedDescription else { return }
-                            errorMessage = textError
-                            showAlert = true
-                        case 500:
-                            activeAlert = .down
-                            showAlert = true
-                        default:
-                            return
-                        }
-                    } else {
-                        guard let cards else { return }
-                        self.cards = cards
-                        isLoading = false
-                    }
+                NetworkService.fetchCompanies(offset: offset) { cards, responseCode, error in
+                    self.networkProcessing(cards, responseCode, error)
                 }
             }
             .alert(isPresented: $showAlert) {
-                            switch activeAlert {
-                            case .auth:
-                                return Alert(title: Text("Error"),
-                                             message: Text("Ошибка авторизации"),
-                                             dismissButton: .default(Text("OK")))
-                            case .message:
-                                return Alert(title: Text("Error"),
-                                             message: Text(errorMessage),
-                                             dismissButton: .default(Text("OK")))
-                            case .down:
-                                return Alert(title: Text("Error"),
-                                             message: Text("Все упало"),
-                                             dismissButton: .default(Text("OK")))
-                            }
+                switch activeAlert {
+                case .authError:
+                    return Alert(title: Text("Error"),
+                                 message: Text("Ошибка авторизации"),
+                                 dismissButton: .default(Text("OK")))
+                case .messageError:
+                    return Alert(title: Text("Error"),
+                                 message: Text(errorMessage),
+                                 dismissButton: .default(Text("OK")))
+                case .downError:
+                    return Alert(title: Text("Error"),
+                                 message: Text("Все упало"),
+                                 dismissButton: .default(Text("OK")))
+                case .eyeButton:
+                    return Alert(title: Text("Eye button pressed"),
+                                 message: Text("companyID: \(currentCard.company.companyId)"),
+                                 dismissButton: .default(Text("OK")))
+                case .trashButton:
+                    return Alert(title: Text("Trash button pressed"),
+                                 message: Text("companyID: \(currentCard.company.companyId)"),
+                                 dismissButton: .default(Text("OK")))
+                case .moreButton:
+                    return Alert(title: Text("More button pressed"),
+                                 message: Text("companyID: \(currentCard.company.companyId)"),
+                                 dismissButton: .default(Text("OK")))
+                }
             }
         }
         .overlay(isLoading ? ProgressView() : nil)

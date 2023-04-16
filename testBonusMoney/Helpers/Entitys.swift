@@ -1,16 +1,14 @@
 //
-//  Entity.swift
+//  Entitys.swift
 //  testBonusMoney
 //
 //  Created by Artour Ilyasov on 15.04.2023.
 //
 
-struct Card: Codable, Identifiable {
+struct Card: Codable {
     let company: Company
     let customerMarkParameters: CustomerMarkParameters
     let mobileAppDashboard: MobileAppDashboard
-    
-    var id: String { company.companyId }
 }
 
 struct Company: Codable {
