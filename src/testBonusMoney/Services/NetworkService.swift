@@ -17,7 +17,7 @@ class NetworkService {
         request.addValue("123", forHTTPHeaderField: "TOKEN")
 
         let bodyDict = ["offset": offset]
-        let bodyData = try? JSONSerialization.data(withJSONObject: bodyDict)
+        let bodyData = try! JSONSerialization.data(withJSONObject: bodyDict)
         request.httpBody = bodyData
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in

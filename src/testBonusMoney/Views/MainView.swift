@@ -13,22 +13,19 @@ struct MainView: View {
     @State var showAlert = false
     @State var activeAlert: ActiveAlert = .messageError
     @State var errorMessage = ""
-
+    
     @State private var offset: Int = 0
     @State private var isRefreshing = false
     @State private var currentCard = Card()
     @State private var stopFetchData = false
-
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 if !cards.isEmpty {
                     VStack {
-                        ForEach(cards) {
-                            CardView(card: $0,
-                                     showAlert: $showAlert,
-                                     activeAlert: $activeAlert,
-                                     currentCard: $currentCard)
+                        ForEach(cards) { card in
+                            CardView(card: card, showAlert: $showAlert, activeAlert: $activeAlert, currentCard: $currentCard)
                                 .cornerRadius(20)
                                 .padding()
                         }

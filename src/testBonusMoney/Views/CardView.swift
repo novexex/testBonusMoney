@@ -27,79 +27,80 @@ struct CardView: View {
             }
             
             Divider()
-
+            
             HStack {
                 Text("200")
                     .font(.title)
                     .fontWeight(.semibold)
                 Text("баллов")
-                    .foregroundColor(Color(hex: card.mobileAppDashboard.textColor))
+                    .foregroundColor(Color(hex: ProjectColors.textColor))
                     .padding(.top, 5)
             }
             .padding(.vertical)
-
+            
             HStack(spacing: 60) {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Кэшбек")
-                        .foregroundColor(Color(hex: card.mobileAppDashboard.textColor))
+                        .foregroundColor(Color(hex: ProjectColors.textColor))
                     Text("1%")
                         .font(.system(size: 22))
                 }
 
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Уровень")
-                        .foregroundColor(Color(hex: card.mobileAppDashboard.textColor))
+                        .foregroundColor(Color(hex: ProjectColors.textColor))
                     Text(decodeUnicodeString(card.customerMarkParameters.loyaltyLevel.name))
                         .font(.system(size: 22))
                 }
             }
             .padding(.vertical)
-
+            
             Divider()
-
+            
             HStack {
                 HStack(spacing: 50) {
                     Button(action: {
                         activeAlert = .eyeButton
                         currentCard = card
                         showAlert = true
-                    }, label: {
+                    }) {
                         Image("eye_white")
                             .resizable()
-                            .colorMultiply(Color(hex: card.mobileAppDashboard.mainColor))
+                            .colorMultiply(Color(hex: ProjectColors.mainColor))
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25)
-                    })
-
+                    }
+                    
                     Button(action: {
                         activeAlert = .trashButton
                         currentCard = card
                         showAlert = true
-                    }, label: {
+                    }) {
                         Image("trash_white")
                             .resizable()
-                            .colorMultiply(Color(hex: card.mobileAppDashboard.accentColor))
+                            .colorMultiply(Color(hex: ProjectColors.accentColor))
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25)
-                    })
-                    .padding(.horizontal)
-
-                    Spacer()
-
-                    Button("Подробнее") {
-                        activeAlert = .moreButton
-                        currentCard = card
-                        showAlert = true
                     }
-                    .frame(width: 130)
-                    .padding()
-                    .foregroundColor(Color(hex: card.mobileAppDashboard.mainColor))
-                    .background(Color(hex: card.mobileAppDashboard.backgroundColor))
-                    .cornerRadius(20)
                 }
+                .padding(.horizontal)
+                
+                Spacer()
+                
+                Button("Подробнее") {
+                    activeAlert = .moreButton
+                    currentCard = card
+                    showAlert = true
+                }
+                .frame(width: 130)
+                .padding()
+                .foregroundColor(Color(hex: ProjectColors.mainColor))
+                .background(Color(hex: ProjectColors.backgroundColor))
+                .cornerRadius(20)
             }
-            .padding()
-            .background(Color(hex: card.mobileAppDashboard.cardBackgroundColor))
+            
         }
+        .padding()
+        .background(Color(hex: ProjectColors.cardBackgroundColor))
     }
 }

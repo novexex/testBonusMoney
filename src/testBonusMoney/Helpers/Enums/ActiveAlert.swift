@@ -9,7 +9,7 @@ enum ActiveAlert {
     case eyeButton
     case trashButton
     case moreButton
-
+    
     case authError
     case messageError
     case downError
