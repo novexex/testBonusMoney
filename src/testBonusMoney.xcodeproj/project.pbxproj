@@ -14,16 +14,16 @@
 		EB67FC6B29EA7AE200245012 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC6A29EA7AE200245012 /* Functions.swift */; };
 		EB67FC6D29EA7C5500245012 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC6C29EA7C5500245012 /* ImageView.swift */; };
 		EB67FC7429EC2E2E00245012 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC7329EC2E2E00245012 /* Color.swift */; };
-		EB67FC7629EC2E3B00245012 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC7529EC2E3B00245012 /* Card.swift */; };
-		EB67FC7829EC2E5300245012 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC7729EC2E5300245012 /* MainView.swift */; };
+		EB67FC7629EC2E3B00245012 /* CardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC7529EC2E3B00245012 /* CardExtension.swift */; };
+		EB67FC7829EC2E5300245012 /* MainViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC7729EC2E5300245012 /* MainViewExtension.swift */; };
 		EB67FC7B29EC2E9700245012 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC7A29EC2E9700245012 /* Card.swift */; };
 		EB67FC7D29EC2E9E00245012 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC7C29EC2E9E00245012 /* Company.swift */; };
 		EB67FC7F29EC2EAD00245012 /* LoyaltyLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC7E29EC2EAD00245012 /* LoyaltyLevel.swift */; };
 		EB67FC8129EC2EB600245012 /* MobileAppDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC8029EC2EB600245012 /* MobileAppDashboard.swift */; };
 		EB67FC8329EC2EBF00245012 /* CustomerMarkParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC8229EC2EBF00245012 /* CustomerMarkParameters.swift */; };
+		EB67FC8529EC31ED00245012 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC8429EC31ED00245012 /* CustomColors.swift */; };
 		EB80957329EA390B00769E5C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80957229EA390B00769E5C /* CardView.swift */; };
 		EB80957829EA39B900769E5C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80957729EA39B900769E5C /* NetworkService.swift */; };
-		EB80957C29EA5FD900769E5C /* ProjectColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB80957B29EA5FD900769E5C /* ProjectColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,16 +36,16 @@
 		EB67FC6A29EA7AE200245012 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		EB67FC6C29EA7C5500245012 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		EB67FC7329EC2E2E00245012 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		EB67FC7529EC2E3B00245012 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		EB67FC7729EC2E5300245012 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		EB67FC7529EC2E3B00245012 /* CardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardExtension.swift; sourceTree = "<group>"; };
+		EB67FC7729EC2E5300245012 /* MainViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewExtension.swift; sourceTree = "<group>"; };
 		EB67FC7A29EC2E9700245012 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		EB67FC7C29EC2E9E00245012 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		EB67FC7E29EC2EAD00245012 /* LoyaltyLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoyaltyLevel.swift; sourceTree = "<group>"; };
 		EB67FC8029EC2EB600245012 /* MobileAppDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAppDashboard.swift; sourceTree = "<group>"; };
 		EB67FC8229EC2EBF00245012 /* CustomerMarkParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMarkParameters.swift; sourceTree = "<group>"; };
+		EB67FC8429EC31ED00245012 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		EB80957229EA390B00769E5C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EB80957729EA39B900769E5C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		EB80957B29EA5FD900769E5C /* ProjectColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +99,8 @@
 		EB67FC6929EA785300245012 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				EB80957B29EA5FD900769E5C /* ProjectColors.swift */,
 				EB67FC6729EA784F00245012 /* ActiveAlert.swift */,
+				EB67FC8429EC31ED00245012 /* CustomColors.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -109,8 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				EB67FC7329EC2E2E00245012 /* Color.swift */,
-				EB67FC7529EC2E3B00245012 /* Card.swift */,
-				EB67FC7729EC2E5300245012 /* MainView.swift */,
+				EB67FC7529EC2E3B00245012 /* CardExtension.swift */,
+				EB67FC7729EC2E5300245012 /* MainViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB67FC6D29EA7C5500245012 /* ImageView.swift in Sources */,
-				EB67FC7829EC2E5300245012 /* MainView.swift in Sources */,
+				EB67FC7829EC2E5300245012 /* MainViewExtension.swift in Sources */,
 				EB67FC6829EA784F00245012 /* ActiveAlert.swift in Sources */,
 				EB67FC8329EC2EBF00245012 /* CustomerMarkParameters.swift in Sources */,
 				EB67FC7429EC2E2E00245012 /* Color.swift in Sources */,
@@ -242,8 +242,8 @@
 				EB67FC7B29EC2E9700245012 /* Card.swift in Sources */,
 				EB80957829EA39B900769E5C /* NetworkService.swift in Sources */,
 				EB67FC6B29EA7AE200245012 /* Functions.swift in Sources */,
-				EB80957C29EA5FD900769E5C /* ProjectColors.swift in Sources */,
-				EB67FC7629EC2E3B00245012 /* Card.swift in Sources */,
+				EB67FC7629EC2E3B00245012 /* CardExtension.swift in Sources */,
+				EB67FC8529EC31ED00245012 /* CustomColors.swift in Sources */,
 				EB67FC7F29EC2EAD00245012 /* LoyaltyLevel.swift in Sources */,
 				EB44442C29EA34CC003336DE /* MainView.swift in Sources */,
 				EB67FC7D29EC2E9E00245012 /* Company.swift in Sources */,
