@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB44442A29EA34CC003336DE /* testBonusMoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44442929EA34CC003336DE /* testBonusMoneyApp.swift */; };
+		EB44442A29EA34CC003336DE /* TestBonusMoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44442929EA34CC003336DE /* TestBonusMoneyApp.swift */; };
 		EB44442C29EA34CC003336DE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44442B29EA34CC003336DE /* MainView.swift */; };
 		EB44442E29EA34CD003336DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB44442D29EA34CD003336DE /* Assets.xcassets */; };
 		EB67FC6829EA784F00245012 /* ActiveAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67FC6729EA784F00245012 /* ActiveAlert.swift */; };
@@ -28,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		EB44442629EA34CC003336DE /* testBonusMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testBonusMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB44442929EA34CC003336DE /* testBonusMoneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testBonusMoneyApp.swift; sourceTree = "<group>"; };
+		EB44442929EA34CC003336DE /* TestBonusMoneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBonusMoneyApp.swift; sourceTree = "<group>"; };
 		EB44442B29EA34CC003336DE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EB44442D29EA34CD003336DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB67FC6629EA73C600245012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		EB80957929EA5E8400769E5C /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				EB44442929EA34CC003336DE /* testBonusMoneyApp.swift */,
+				EB44442929EA34CC003336DE /* TestBonusMoneyApp.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -248,7 +248,7 @@
 				EB44442C29EA34CC003336DE /* MainView.swift in Sources */,
 				EB67FC7D29EC2E9E00245012 /* Company.swift in Sources */,
 				EB80957329EA390B00769E5C /* CardView.swift in Sources */,
-				EB44442A29EA34CC003336DE /* testBonusMoneyApp.swift in Sources */,
+				EB44442A29EA34CC003336DE /* TestBonusMoneyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

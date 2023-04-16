@@ -1,0 +1,7 @@
+# .swiftlint.yml
+disabled_rules:
+  - trailing_whitespace
+
+included:
+  - src
+

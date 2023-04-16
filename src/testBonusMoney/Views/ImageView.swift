@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ImageView: View {
     var imageUrl: URL?
-    
+
     var body: some View {
         AsyncImage(url: imageUrl) {
                 $0
