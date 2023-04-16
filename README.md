@@ -1,4 +1,4 @@
-### MARK: I couldn't pull to refresh at the bottom, so I left the default
+### MARK: I couldn't pull to refresh at the bottom, so I left the default on the top
 
 Требуется реализовать экран загрузки кард компаний, см. файл template. 
 Экран – это динамический список карт компаний, который подгружается 
