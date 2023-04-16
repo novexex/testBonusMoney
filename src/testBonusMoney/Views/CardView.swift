@@ -29,7 +29,7 @@ struct CardView: View {
             Divider()
             
             HStack {
-                Text("200")
+                Text("\(card.customerMarkParameters.mark)")
                     .font(.title)
                     .fontWeight(.semibold)
                 Text("баллов")
@@ -42,7 +42,7 @@ struct CardView: View {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Кэшбек")
                         .foregroundColor(Color(hex: card.mobileAppDashboard.textColor))
-                    Text("1%")
+                    Text("\(card.customerMarkParameters.loyaltyLevel.number)")
                         .font(.system(size: 22))
                 }
 
