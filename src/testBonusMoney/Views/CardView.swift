@@ -33,7 +33,7 @@ struct CardView: View {
                     .font(.title)
                     .fontWeight(.semibold)
                 Text("баллов")
-                    .foregroundColor(Color(hex: ProjectColors.textColor))
+                    .foregroundColor(Color(hex: card.mobileAppDashboard.textColor))
                     .padding(.top, 5)
             }
             .padding(.vertical)
@@ -41,14 +41,14 @@ struct CardView: View {
             HStack(spacing: 60) {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Кэшбек")
-                        .foregroundColor(Color(hex: ProjectColors.textColor))
+                        .foregroundColor(Color(hex: card.mobileAppDashboard.textColor))
                     Text("1%")
                         .font(.system(size: 22))
                 }
 
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Уровень")
-                        .foregroundColor(Color(hex: ProjectColors.textColor))
+                        .foregroundColor(Color(hex: card.mobileAppDashboard.textColor))
                     Text(decodeUnicodeString(card.customerMarkParameters.loyaltyLevel.name))
                         .font(.system(size: 22))
                 }
@@ -66,7 +66,7 @@ struct CardView: View {
                     }) {
                         Image("eye_white")
                             .resizable()
-                            .colorMultiply(Color(hex: ProjectColors.mainColor))
+                            .colorMultiply(Color(hex: card.mobileAppDashboard.mainColor))
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25)
                     }
@@ -78,7 +78,7 @@ struct CardView: View {
                     }) {
                         Image("trash_white")
                             .resizable()
-                            .colorMultiply(Color(hex: ProjectColors.accentColor))
+                            .colorMultiply(Color(hex: card.mobileAppDashboard.accentColor))
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25)
                     }
@@ -94,13 +94,13 @@ struct CardView: View {
                 }
                 .frame(width: 130)
                 .padding()
-                .foregroundColor(Color(hex: ProjectColors.mainColor))
-                .background(Color(hex: ProjectColors.backgroundColor))
+                .foregroundColor(Color(hex: card.mobileAppDashboard.mainColor))
+                .background(Color(hex: card.mobileAppDashboard.backgroundColor))
                 .cornerRadius(20)
             }
             
         }
         .padding()
-        .background(Color(hex: ProjectColors.cardBackgroundColor))
+        .background(Color(hex: card.mobileAppDashboard.cardBackgroundColor))
     }
 }
